@@ -1,0 +1,38 @@
+package com.library.service.pages;
+
+import com.library.dao.book.BooksJpaDao;
+import com.library.domain.book.Books;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * Created by Vlad on 14.03.2016.
+ */
+public class AvaliableBooksImpl implements AvaliableBooks {
+
+    @Override
+    public ArrayList getAvaliableBooks() {
+        BooksJpaDao booksJpaDao = new BooksJpaDao();
+        Books books = new Books();
+        List<Books> booksList = booksJpaDao.getAll();
+
+        ArrayList avaliableBooks = new ArrayList();
+
+        for (int i = 0; i < booksList.size(); i++) {
+            HashMap items = new HashMap();
+            items.put("title", booksList.get(i).getTitle());
+            items.put("description", booksList.get(i).getDescription());
+            items.put("link", booksList.get(i).getAuthor());
+            avaliableBooks.add(items);
+
+        }
+
+        Books book = new Books("Robinzon", "Nice book", "Defo");
+
+        avaliableBooks.add(book);
+        return avaliableBooks;
+
+    }
+}

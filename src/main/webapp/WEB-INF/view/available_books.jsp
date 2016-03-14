@@ -52,13 +52,16 @@
     </div>
 
     <div id="content" class="content">
-        <form action="BooksUploadController" method="post" enctype="multipart/form-data">
-                       <input type="file" name="file" /><br/>
-            <input type="submit" />
-        </form>
 
-
-        <a href="DownloadBookController">click here</a>
+        <c:forEach items="${booksList}" var="element">
+            <td><h2>${element.title}</h2></td>
+            <br>
+            <td>${element.description}</td>
+            <br>
+            <td>${element.author}</td>
+            <br>
+            </tr>
+        </c:forEach>
 
     </div>
 

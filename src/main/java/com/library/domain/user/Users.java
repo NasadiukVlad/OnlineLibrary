@@ -25,6 +25,9 @@ public class Users {
     @Column(name = "userEmail")
     private String userEmail;
 
+    @Column(name = "selectedBooks")
+    private String selectedBooks;
+
     @Column(name = "role")
     private String role;
 

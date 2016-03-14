@@ -64,6 +64,36 @@
         <url-pattern>/BBCArchivePageController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>BooksUploadController</servlet-name>
+        <servlet-class>com.library.controller.upload.BooksUploadController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BooksUploadController</servlet-name>
+        <url-pattern>/BooksUploadController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadBookControlelr</servlet-name>
+        <servlet-class>com.library.controller.upload.DownloadBookController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DownloadBookControlelr</servlet-name>
+        <url-pattern>/DownloadBookControlelr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AvailiableBooksController</servlet-name>
+        <servlet-class>com.library.controller.mainpage.AvailiableBooksController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AvailiableBooksController</servlet-name>
+        <url-pattern>/AvailiableBooksController</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>
@@ -84,5 +114,13 @@
         <servlet-name>default</servlet-name>
         <url-pattern>*.js</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>
+            D:\uploads\
+        </param-value>
+    </context-param>
 
 </web-app>

@@ -53,12 +53,21 @@
 
     <div id="content" class="content">
         <form action="BooksUploadController" method="post" enctype="multipart/form-data">
-                       <input type="file" name="file" /><br/>
+            <input type="text" name="title" /><br/>
+            <input type="text" name="description" /><br/>
+            <input type="text" name="author" /><br/>
+            <input type="file" name="file" /><br/>
             <input type="submit" />
         </form>
 
 
-        <a href="DownloadBookController">click here</a>
+        <form action="BooksUploadController" method="get" enctype="multipart/form-data">
+            <input type="text" name="title" /><br/>
+            <input type="text" name="description" /><br/>
+            <input type="text" name="author" /><br/>
+            <input type="file" name="file" /><br/>
+            <input type="submit" />
+        </form>
 
     </div>
 

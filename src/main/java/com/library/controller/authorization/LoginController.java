@@ -9,7 +9,8 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-import java.io.IOException;
+import java.io.*;
+import java.sql.*;
 import java.util.Map;
 
 /**
@@ -22,6 +23,8 @@ public class LoginController extends HttpServlet {
     public LoginController() {
         super();
     }
+
+
 
 
     protected void doPost(HttpServletRequest request,
@@ -59,9 +62,25 @@ public class LoginController extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
 
+        /*try (
+                Connection conn = DriverManager.getConnection(
+                        "jdbc:postgresql://localhost/OnlineLibrary?user=postgres&password=qa1234")    ;
+                Statement st = conn.createStatement()                                            ;
+                ResultSet rs = st.executeQuery("SELECT file FROM public.books WHERE book_id='1'");
+                FileOutputStream fos = new FileOutputStream("C:/Users/Vlad/Desktop/retrieved.pdf")) {
+            rs.next();
+            byte[] fileBytes = rs.getBytes(1);
+            fos.write(fileBytes);
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+        }*/
+
         RequestDispatcher rd = null;
         rd = request.getRequestDispatcher("WEB-INF/view/login.jsp");
         rd.forward(request, response);
+
     }
 
-}
+
+    }
+

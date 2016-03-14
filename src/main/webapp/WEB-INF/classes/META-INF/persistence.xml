@@ -5,7 +5,9 @@
 
     <persistence-unit name="OnlineLibraryPersistance" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.library.domain.book.Books</class>
         <class>com.library.domain.user.Users</class>
+
 
 
         <properties>
