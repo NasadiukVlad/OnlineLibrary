@@ -13,7 +13,7 @@
     <script type="text/javascript" src="js/scrollOnTop.js"></script>
     <%--<link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />--%>
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png"/>
 </head>
 
 <body>
@@ -52,10 +52,23 @@
     </div>
 
     <div id="content" class="content">
-        <form action="BooksDownloadController" method="get">
 
-            <input type="submit" value="getbook" />
-        </form>
+        <c:forEach items="${downloadBooksList}" var="element">
+            <td><h2 class="content">${element.title}</h2></td>
+            <br>
+            <td>${element.description}</td>
+            <br>
+            <td>${element.author}</td>
+            <br>
+            <td>
+                <form action="BooksDownloadController" method="get">
+                    <input type="hidden" name="filePath" value= "${element.filePath}">
+                    <input type="submit" value="getbook"/>
+                </form>
+            </td>
+            <br>
+            </tr>
+        </c:forEach>
 
 
     </div>

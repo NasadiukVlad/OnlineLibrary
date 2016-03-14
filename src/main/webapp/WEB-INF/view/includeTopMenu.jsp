@@ -13,7 +13,7 @@
 <c:if test="${userStatus == 'user'}">
 <a href="/DownloadPageController" class="top_menu_a">Download book</a>
 </c:if>
-<c:if test="${userStatus == 'admin'}">
+<c:if test="${userStatus == 'user'}">
 <a href="/UploadPageController" class="top_menu_a">Upload book</a>
 </c:if>
 <a href="/ArchivePageController" class="top_menu_a">Selected books</a>

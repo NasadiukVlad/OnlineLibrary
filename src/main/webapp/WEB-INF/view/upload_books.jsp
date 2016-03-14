@@ -7,7 +7,7 @@
 <head>
     <title>SlowNews</title>
     <meta charset="utf-8">
-    <link href="css/main_pg.css" rel="stylesheet" type="text/css">
+    <link href="css/books_upload.css" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jsCounter.js"></script>
     <script type="text/javascript" src="js/scrollOnTop.js"></script>
@@ -52,13 +52,21 @@
     </div>
 
     <div id="content" class="content">
-        <form action="BooksUploadController" method="post" enctype="multipart/form-data">
+       <%-- <form action="BooksUploadController" method="post" enctype="multipart/form-data">
             <input type="file" name="file" /><br/>
             <input type="submit" />
+        </form>--%>
+
+        <form action="BooksUploadController" method="post" enctype="multipart/form-data" class="file_form">
+            <br>
+            <h1>Add your book</h1>
+
+            <input type="file" name="file" /><br/>
+            <br>
+
+            <input type="submit" value="Confirm" name="button" class="button">
+
         </form>
-
-
-        <a href="DownloadBookController">click here</a>
 
     </div>
 

@@ -72,4 +72,12 @@ public class Books {
     public void setBookId(long bookId) {
         this.bookId = bookId;
     }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
 }

@@ -59,16 +59,16 @@ public class BooksJpaDao implements BooksDao {
     }
 
     @Override
-    public Books getByLogin(String username) {
-        List<Books> allUsersList = new ArrayList<>();
+    public List<Books> getByTitle(String title) {
+        List<Books> selectedBooksList = new ArrayList<>();
         try {
             transaction.begin();
             TypedQuery<Books> result =
-                    entityManager.createQuery("SELECT users FROM Users users where users.username = '" + username + "'",
+                    entityManager.createQuery("SELECT books FROM Books books where books.title = '" + title + "'",
                             Books.class);
             transaction.commit();
 
-            allUsersList = result.getResultList();
+            selectedBooksList = result.getResultList();
 
         } catch (Exception exception) {
             transaction.rollback();
@@ -77,10 +77,10 @@ public class BooksJpaDao implements BooksDao {
             close();
         }
 
-        if (allUsersList.isEmpty()) {
+        if (selectedBooksList.isEmpty()) {
             return null;
         } else {
-            return allUsersList.get(0);
+            return selectedBooksList;
         }
 
     }

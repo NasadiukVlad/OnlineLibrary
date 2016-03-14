@@ -11,6 +11,6 @@ import java.util.List;
 public interface BooksDao {
     void addBook(Books book);
     List<Books> getAll();
-    Books getByLogin(String login);
+    List<Books> getByTitle(String title);
     void close();
 }

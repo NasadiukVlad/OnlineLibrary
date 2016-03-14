@@ -20,7 +20,6 @@
 }
 
 body {
-   /* background: url("../images/bg.png") #22313f;*/
     /*background: linear-gradient(to top, #22313f, #f1da36);*/
     font: 17px Segoe Ui, Tahoma, sans-serif;
 }
@@ -67,7 +66,13 @@ a {
     color: red;
 }
 
+.login {
+    text-align: -webkit-center;
+    margin-top: 4%;
+}
+
 .content {
+
     width: 72%;
     background: #fff;
     color: #674c47;
@@ -79,30 +84,15 @@ a {
     font: BenderRegular;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Bender;
+    font: BenderRegular;
+
 }
 
 .content h1 {
     text-align: center;
-    margin-top: 10px;
-}
-
-.content h2 {
-    margin-top: 15px;
-}
-
-.h2 {
-    margin-top: 15px;
-}
-
-.content p {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.content ul {
-    list-style: circle;
-    color: #674c47;
-    margin-left: 50px;
     margin-top: 10px;
 }
 
@@ -111,13 +101,35 @@ a {
     margin-top: 300px;
     padding-bottom: 20px;
     text-align: center;
-    height: 2.3em;
-    line-height: 2.3em;
+    height: 2.7em;
+    line-height: 2.7em;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    margin-left: 90%;
+    margin-left: 30px;
     font-family: Segoe Ui;
+}
+
+.content img {
+    overflow: hidden;
+    width: 250px;
+    vertical-align: middle;
+    padding: 50px 60px 60px 60px;
+}
+
+.content_main_img {
+    width: 250px;
+    margin: 0px 210px;
+}
+
+.top_menu {
+    width: 100%;
+    /*height: 5%;*/
+    background: #22313f;
+    color: #ffffff;
+    /*  padding-right: 250px;*/
+    margin-left:5%;
+    text-align: center;
 }
 
 .top_menu_a {
@@ -148,28 +160,6 @@ a {
     font-family: Bender;
     font: BenderRegular;
 }
-
-.content img {
-    overflow: hidden;
-    width: 250px;
-    vertical-align: middle;
-    padding: 50px 60px 60px 60px;
-}
-
-.content_main_img {
-    width: 250px;
-    margin: 0px 210px;
-}
-
-.top_menu {
-    width: 100%;
-    height: 5%;
-    background: #22313f;
-    color: #ffffff;
-    margin-left:5%;
-    text-align: center;
-}
-
 
 .left_navigation {
     color: #ddd9d8;
@@ -214,6 +204,83 @@ a {
     line-height: 200%;
     color: #ffffff;
 }
+
+.login_form {
+
+    width: 65%;
+    height: 60%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+}
+
+.file_form {
+    width: 65%;
+    height: 60%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.h1  {
+    font-size: 35px;
+    text-align: center;
+    vertical-align: middle;
+  /*  margin-right: 230px;*/
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+
+
+.login_p {
+    margin-top: 4%;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.login form p a {
+    font-size: 20px;
+    color: #fffc01;
+    margin-left: 0px;
+    font-family: Bender;
+    font: BenderRegular;
+    font-weight: 100;
+}
+
+.login a {
+    font-size: 20px;
+    color: #fffc01;
+    text-align: center;
+    font-family: Bender;
+    font: BenderRegular;
+    font-weight: 100;
+    margin-left: 0px;
+
+}
+
+.login_form_input {
+    margin-top: 10px;
+    height: 8%;
+    width: 40%;
+    text-align: center;
+}
+
+.button {
+    margin-top: 20px;
+    width: 20%;
+    height: 9%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+    border-color: #fffc01;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .user_login {
     color: #FFFC00;
     margin-right: 8%;
@@ -229,7 +296,7 @@ a {
     position:fixed;
     z-index:9999;
     bottom:10px;
-    right: 0px;
+    right:10px;
     background: url('../images/topArrow.png') no-repeat;
     width: 64px;
     height: 64px;

@@ -1,6 +1,8 @@
 package com.library.controller.mainpage;
 
 import com.library.model.user.User;
+import com.library.service.pages.AvaliableBooksImpl;
+import com.library.service.pages.DownloadBooksImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -23,6 +26,13 @@ public class DownloadPageController extends HttpServlet {
         ServletContext context = request.getSession().getServletContext();
         Map<String, User> users = null;
         Object obj = context.getAttribute("user");
+
+        DownloadBooksImpl downloadBooks = new DownloadBooksImpl();
+
+        ArrayList bookList = new ArrayList();
+        bookList = downloadBooks.getAvaliableBooks();
+
+        context.setAttribute("downloadBooksList", bookList);
 
         context.setAttribute("user", users);
 

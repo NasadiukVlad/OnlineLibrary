@@ -1,5 +1,8 @@
 package com.library.controller.upload;
 
+import com.library.service.pages.AvaliableBooksImpl;
+import com.library.service.pages.DownloadBooksImpl;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,15 +12,25 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 /**
  * Created by Vlad on 14.03.2016.
  */
 public class BooksDownloadController extends HttpServlet {
+
+
+
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
+
+        DownloadBooksImpl downloadBooks = new DownloadBooksImpl();
+        ArrayList bookList = new ArrayList();
+        bookList = downloadBooks.getAvaliableBooks();
+
         // reads input file from an absolute path
-        String filePath = "D:/uploads/UI_DEV_TEST.docx";
+       // String filePath = "D:/uploads/UI_DEV_TEST.docx";
+        String filePath =  request.getParameter("filePath");
         File downloadFile = new File(filePath);
         FileInputStream inStream = new FileInputStream(downloadFile);
 
