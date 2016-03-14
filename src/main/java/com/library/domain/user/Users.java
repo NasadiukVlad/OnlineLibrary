@@ -28,17 +28,37 @@ public class Users {
     @Column(name = "selectedBooks")
     private String selectedBooks;
 
-    @Column(name = "role")
-    private String role;
+    @Column(name = "status")
+    private String userStatus;
 
-    public Users(String username, String password, String userEmail) {
+     public Users(String username, String password, String userEmail, String userStatus) {
         this.username = username;
         this.password = password;
         this.userEmail = userEmail;
+        this.userStatus = userStatus;
+
     }
 
     public Users() {
     }
+
+    public String getSelectedBooks() {
+        return selectedBooks;
+    }
+
+    public void setSelectedBooks(String selectedBooks) {
+        this.selectedBooks = selectedBooks;
+    }
+
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
+    }
+
+
 
     public long getUsernameId() {
         return usernameId;
@@ -70,14 +90,6 @@ public class Users {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
 }

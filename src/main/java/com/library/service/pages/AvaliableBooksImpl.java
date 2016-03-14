@@ -24,14 +24,11 @@ public class AvaliableBooksImpl implements AvaliableBooks {
             HashMap items = new HashMap();
             items.put("title", booksList.get(i).getTitle());
             items.put("description", booksList.get(i).getDescription());
-            items.put("link", booksList.get(i).getAuthor());
+            items.put("author", booksList.get(i).getAuthor());
             avaliableBooks.add(items);
 
         }
 
-        Books book = new Books("Robinzon", "Nice book", "Defo");
-
-        avaliableBooks.add(book);
         return avaliableBooks;
 
     }

@@ -24,18 +24,18 @@ public class Books {
     @Column(name = "author")
     private String author;
 
-    @Column(name = "status")
-    private String userStatus;
+    @Column(name = "filePath")
+    private String filePath;
+
 
     /*@Column(name = "filepath")
     private String filepath;*/
 
-    public Books(String title, String description, String author, String userStatus) {
+    public Books(String title, String description, String author, String filePath) {
         this.title = title;
         this.description = description;
         this.author = author;
-        this.userStatus = userStatus;
-      //  this.filepath = filepath;
+        this.filePath = filePath;
     }
 
     public Books() {

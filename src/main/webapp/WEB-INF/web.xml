@@ -94,6 +94,16 @@
         <url-pattern>/AvailiableBooksController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>BookPropertiesController</servlet-name>
+        <servlet-class>com.library.controller.upload.BookPropertiesController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BookPropertiesController</servlet-name>
+        <url-pattern>/BookPropertiesController</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>

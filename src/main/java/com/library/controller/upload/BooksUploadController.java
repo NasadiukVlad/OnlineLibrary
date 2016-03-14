@@ -62,8 +62,9 @@ public class BooksUploadController extends HttpServlet {
                 for (FileItem item : multiparts) {
                     if (!item.isFormField()) {
                         String name = new File(item.getName()).getName();
-                        item.write(new File(UPLOAD_DIRECTORY + File.separator + name));
-                        System.out.println(UPLOAD_DIRECTORY + File.separator + name);
+                        item.write(new File(UPLOAD_DIRECTORY + name));
+                        System.out.println(UPLOAD_DIRECTORY + name);
+                        context.setAttribute("filePath", UPLOAD_DIRECTORY + name );
                     }
                 }
 
@@ -75,14 +76,9 @@ public class BooksUploadController extends HttpServlet {
                 request.setAttribute("message", "File Upload Failed due to " + e);
             }
 
-        request.getRequestDispatcher("/registration.jsp").forward(request, response);
+        rd = request.getRequestDispatcher("WEB-INF/view/creating_book.jsp");
+        rd.forward(request, response);
 
-       // Books book = new Books(title, description, author);
-        //BooksJpaDao booksJpaDao = new BooksJpaDao();
-
-        //booksJpaDao.addBook(book);
-
-        request.setAttribute("message", "File Uploaded Successfully");
 
     }
 
