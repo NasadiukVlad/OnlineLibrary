@@ -52,9 +52,11 @@
     </div>
 
     <div id="content" class="content">
+        <form action="BooksDownloadController" method="get">
 
-        <h1>Welcome to Online Library</h1>
-        <h2>Here you can improve you knowledges!</h2>
+            <input type="submit" value="getbook" />
+        </form>
+
 
     </div>
 

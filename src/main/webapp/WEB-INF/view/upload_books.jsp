@@ -52,9 +52,13 @@
     </div>
 
     <div id="content" class="content">
+        <form action="BooksUploadController" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" /><br/>
+            <input type="submit" />
+        </form>
 
-        <h1>Welcome to Online Library</h1>
-        <h2>Here you can improve you knowledges!</h2>
+
+        <a href="DownloadBookController">click here</a>
 
     </div>
 

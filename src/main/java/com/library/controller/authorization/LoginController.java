@@ -45,6 +45,7 @@ public class LoginController extends HttpServlet {
             if (user.getUsername().equals(username) &&
                     user.getPassword().equals(password)) {
                 context.setAttribute("username", username);
+                context.setAttribute("userStatus", "user");
                 rd = request.getRequestDispatcher("WEB-INF/view/startIndex.jsp");
             } else if (!user.getUsername().equals(username) ||
                     !user.getPassword().equals(password)) {

@@ -104,6 +104,36 @@
         <url-pattern>/BookPropertiesController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DownloadPageController</servlet-name>
+        <servlet-class>com.library.controller.mainpage.DownloadPageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DownloadPageController</servlet-name>
+        <url-pattern>/DownloadPageController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadPageController</servlet-name>
+        <servlet-class>com.library.controller.mainpage.UploadPageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadPageController</servlet-name>
+        <url-pattern>/UploadPageController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BooksDownloadController</servlet-name>
+        <servlet-class>com.library.controller.upload.BooksDownloadController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BooksDownloadController</servlet-name>
+        <url-pattern>/BooksDownloadController</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>
