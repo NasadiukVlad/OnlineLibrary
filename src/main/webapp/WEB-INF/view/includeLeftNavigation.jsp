@@ -7,8 +7,3 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-  <ul>
-    <li><a href="/IndexPageController">BBC World</a></li>
-    <li><a href="/HabrahabrMainNewsController">Habrahabr</a></li>
-    <li><a href="/JavaWorldNewsController">Java World</a></li>
-  </ul>

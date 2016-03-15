@@ -7,4 +7,5 @@ import java.util.ArrayList;
  */
 public interface AvaliableBooks {
     ArrayList getAvaliableBooks();
+    ArrayList getSearchingBooks(String title);
 }

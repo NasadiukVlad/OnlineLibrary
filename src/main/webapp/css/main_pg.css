@@ -20,7 +20,7 @@
 }
 
 body {
-   /* background: url("../images/bg.png") #22313f;*/
+    /* background: url("../images/bg.png") #22313f;*/
     /*background: linear-gradient(to top, #22313f, #f1da36);*/
     font: 17px Segoe Ui, Tahoma, sans-serif;
 }
@@ -151,7 +151,7 @@ a {
 
 .content img {
     overflow: hidden;
-    width: 250px;
+
     vertical-align: middle;
     padding: 50px 60px 60px 60px;
 }
@@ -166,10 +166,9 @@ a {
     height: 5%;
     background: #22313f;
     color: #ffffff;
-    margin-left:5%;
+    margin-left: 5%;
     text-align: center;
 }
-
 
 .left_navigation {
     color: #ddd9d8;
@@ -214,21 +213,22 @@ a {
     line-height: 200%;
     color: #ffffff;
 }
+
 .user_login {
     color: #FFFC00;
     margin-right: 8%;
-    text-align: right;
-    margin-top: -45px;
+    margin-left: 11%;
 }
+
 .user_login a {
     color: #FFFC00;
     text-decoration: underline;
 }
 
 .toTop {
-    position:fixed;
-    z-index:9999;
-    bottom:10px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 10px;
     right: 0px;
     background: url('../images/topArrow.png') no-repeat;
     width: 64px;
@@ -249,6 +249,20 @@ a {
     text-align: center;
     border-color: #fffc01;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+.search_form {
+    width: 100%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+}
+
+.search_form_input {
+    margin-top: 10px;
+    height: 5%;
+    width: 70%;
     text-align: center;
 }
 

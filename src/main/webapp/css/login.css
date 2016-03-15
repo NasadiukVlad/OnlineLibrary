@@ -35,6 +35,20 @@ a {
     overflow: hidden;
 }
 
+.search_form {
+    width: 100%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+}
+
+.search_form_input {
+     margin-top: 10px;
+     height: 5%;
+     width: 70%;
+     text-align: center;
+ }
+
 .sidebar {
     width: 18%;
     height: 100%;

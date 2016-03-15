@@ -10,7 +10,12 @@
 <strong>Weather</strong>
 <br>
 
-Location: ${location}
+<%--Location: ${location}
 <br> Sky Status: ${skyStatus}
 <br> Temperature: ${temp}
-<br> Wind speed: ${windSpeed} m/s
+<br> Wind speed: ${windSpeed} m/s--%>
+
+Location: Kyiv
+<br> Sky Status: clear
+<br> Temperature: +10
+<br> Wind speed: 7 m/s

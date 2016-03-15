@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>SlowNews</title>
+    <title>Online library</title>
     <meta charset="utf-8">
     <link href="css/books_upload.css" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -25,11 +25,27 @@
 
             <div id="logo_side_bar" class="logo_side_bar">
                 <img src="images/logo.jpg">
-                News, from the last enter:
-                <div id="counter"></div>
             </div>
 
         </a>
+
+        <c:if test="${not empty username}">
+            <div id="user_login" class="user_login">
+                Welcome, ${username}! You can <a href="LogoutController" class="top_menu_logout_a">logout</a>
+            </div>
+        </c:if>
+
+        <form action="SearchPageController" method="get" class="search_form">
+            <br>
+            <h1>Search</h1>
+
+            <p class="login_p">What book are you looking for?: </p>
+            <br>
+            <input type="text" name="searchingTitle" class="search_form_input">
+            <br>
+            <input type="submit" value="Send" name="button" class="button">
+
+        </form>
 
         <div id="left_navigation" class="left_navigation">
             <jsp:include page="includeLeftNavigation.jsp"/>
@@ -44,11 +60,6 @@
 
     <div id="top_menu" class="top_menu">
         <jsp:include page="includeTopMenu.jsp"/>
-        <c:if test="${not empty username}">
-            <div id="user_login" class="user_login">
-                Welcome, ${username}! You can <a href="LogoutController" class="top_menu_logout_a">logout</a>
-            </div>
-        </c:if>
     </div>
 
     <div id="content" class="content">

@@ -154,6 +154,26 @@
         <url-pattern>/FavoriteBooksPageController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+    <servlet-name>SearchController</servlet-name>
+    <servlet-class>com.library.controller.innerpages.SearchController</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchController</servlet-name>
+        <url-pattern>/SearchController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchPageController</servlet-name>
+        <servlet-class>com.library.controller.mainpage.SearchPageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchPageController</servlet-name>
+        <url-pattern>/SearchPageController</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>

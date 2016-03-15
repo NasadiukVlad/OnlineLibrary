@@ -32,4 +32,24 @@ public class AvaliableBooksImpl implements AvaliableBooks {
         return avaliableBooks;
 
     }
+
+    @Override
+    public ArrayList getSearchingBooks(String title) {
+        BooksJpaDao booksJpaDao = new BooksJpaDao();
+        Books books = new Books();
+
+        List<Books> booksList = booksJpaDao.getByTitle(title);
+
+        ArrayList searchingBooks = new ArrayList();
+
+        for (int i = 0; i < booksList.size(); i++) {
+            HashMap items = new HashMap();
+            items.put("title", booksList.get(i).getTitle());
+            items.put("description", booksList.get(i).getDescription());
+            items.put("author", booksList.get(i).getAuthor());
+            searchingBooks.add(items);
+        }
+
+        return searchingBooks;
+    }
 }

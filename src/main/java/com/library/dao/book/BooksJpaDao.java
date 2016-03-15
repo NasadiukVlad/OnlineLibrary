@@ -77,11 +77,8 @@ public class BooksJpaDao implements BooksDao {
             close();
         }
 
-        if (selectedBooksList.isEmpty()) {
-            return null;
-        } else {
             return selectedBooksList;
-        }
+
 
     }
 

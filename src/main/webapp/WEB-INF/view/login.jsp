@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title>SlowChat</title>
+    <title>Online library</title>
     <meta charset="utf-8">
     <link href="css/login.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.png" />
@@ -28,6 +28,12 @@
 
         </a>
 
+        <c:if test="${not empty username}">
+            <div id="user_login" class="user_login">
+                Welcome, ${username}! You can <a href="LogoutController" class="top_menu_logout_a">logout</a>
+            </div>
+        </c:if>
+
         <div id="left_navigation" class="left_navigation">
             <jsp:include page="includeLeftNavigation.jsp"/>
         </div>
@@ -39,15 +45,7 @@
     </div>
 
     <div id="top_menu" class="top_menu">
-
         <jsp:include page="includeTopMenu.jsp"/>
-
-        <c:if test="${not empty username}">
-            <div id="user_login" class="user_login">
-                Welcome, ${username}! You can <a href="LogoutController" class="top_menu_logout_a">logout</a>
-            </div>
-        </c:if>
-
     </div>
 
     <div id="content" class="content">

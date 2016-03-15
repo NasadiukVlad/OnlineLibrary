@@ -10,13 +10,15 @@
 
 
 <a href="/AvailiableBooksController" class="top_menu_a">Availiable books</a>
-<c:if test="${userStatus == 'user'}">
+<c:if test="${(userStatus == 'user') || (userStatus == 'admin')}">
 <a href="/DownloadPageController" class="top_menu_a">Download book</a>
 </c:if>
-<c:if test="${userStatus == 'user'}">
+<c:if test="${userStatus == 'admin'}">
 <a href="/UploadPageController" class="top_menu_a">Upload book</a>
 </c:if>
+<c:if test="${userStatus == 'user' || (userStatus == 'admin')}">
 <a href="/FavoriteBooksPageController" class="top_menu_a">Favorite books</a>
+</c:if>
 <c:if test="${empty username}">
 <a href="/LoginController" class="top_menu_a">Login</a>
 <a href="RegistrationController" class="top_menu_a">Registration</a>

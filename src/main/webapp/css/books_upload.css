@@ -251,6 +251,21 @@ a {
     font-weight: 100;
 }
 
+.search_form {
+    width: 100%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+}
+
+.search_form_input {
+    margin-top: 10px;
+    height: 5%;
+    width: 70%;
+    text-align: center;
+}
+
+
 .login a {
     font-size: 20px;
     color: #fffc01;
@@ -284,9 +299,9 @@ a {
 .user_login {
     color: #FFFC00;
     margin-right: 8%;
-    text-align: right;
-    margin-top: -45px;
+    margin-left: 11%;
 }
+
 .user_login a {
     color: #FFFC00;
     text-decoration: underline;
