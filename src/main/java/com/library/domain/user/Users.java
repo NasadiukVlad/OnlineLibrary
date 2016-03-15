@@ -22,19 +22,12 @@ public class Users {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "userEmail")
-    private String userEmail;
-
-    @Column(name = "selectedBooks")
-    private String selectedBooks;
-
     @Column(name = "status")
     private String userStatus;
 
-     public Users(String username, String password, String userEmail, String userStatus) {
+     public Users(String username, String password, String userStatus) {
         this.username = username;
         this.password = password;
-        this.userEmail = userEmail;
         this.userStatus = userStatus;
 
     }
@@ -42,13 +35,6 @@ public class Users {
     public Users() {
     }
 
-    public String getSelectedBooks() {
-        return selectedBooks;
-    }
-
-    public void setSelectedBooks(String selectedBooks) {
-        this.selectedBooks = selectedBooks;
-    }
 
     public String getUserStatus() {
         return userStatus;
@@ -57,8 +43,6 @@ public class Users {
     public void setUserStatus(String userStatus) {
         this.userStatus = userStatus;
     }
-
-
 
     public long getUsernameId() {
         return usernameId;
@@ -84,12 +68,6 @@ public class Users {
         this.password = password;
     }
 
-    public String getUserEmail() {
-        return userEmail;
-    }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
 
 }

@@ -35,9 +35,9 @@ public class RegistrationController extends HttpServlet {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String userEmail = request.getParameter("userEmail");
 
-        Users user = new Users(username, password, userEmail, "user");
+
+        Users user = new Users(username, password, "user");
         UsersJpaDao usersJpaDao = new UsersJpaDao();
 
         usersJpaDao.addUser(user);

@@ -34,18 +34,6 @@
             </div>
         </c:if>
 
-        <form action="SearchPageController" method="get" class="search_form">
-            <br>
-            <h1>Search</h1>
-
-            <p class="login_p">What book are you looking for?: </p>
-            <br>
-            <input type="text" name="searchingTitle" class="search_form_input">
-            <br>
-            <input type="submit" value="Send" name="button" class="button">
-
-        </form>
-
         <div id="left_navigation" class="left_navigation">
             <jsp:include page="includeLeftNavigation.jsp"/>
         </div>
