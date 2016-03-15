@@ -54,11 +54,11 @@
     <div id="content" class="content">
 
         <c:forEach items="${booksList}" var="element">
-            <td><h2 class="content">${element.title}</h2></td>
+            <td><h2>${element.title}</h2></td>
             <br>
             <td>${element.description}</td>
             <br>
-            <td>${element.author}</td>
+            <td>Author: ${element.author}</td>
             <br>
             </tr>
         </c:forEach>

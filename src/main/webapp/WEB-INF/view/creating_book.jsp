@@ -10,7 +10,7 @@
 <head>
     <title>SlowChat</title>
     <meta charset="utf-8">
-    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="css/books_upload.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.png"/>
 </head>
 
@@ -54,7 +54,7 @@
 
         <div id="login" class="login">
 
-            <form action="BookPropertiesController" method="post" class="login_form">
+            <form action="BookPropertiesController" method="post" class="file_form">
                 <br>
                 <h1>Add your book</h1>
 

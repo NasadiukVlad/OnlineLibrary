@@ -134,6 +134,26 @@
         <url-pattern>/BooksDownloadController</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>FavoriteBooksController</servlet-name>
+        <servlet-class>com.library.controller.innerpages.FavoriteBooksController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FavoriteBooksController</servlet-name>
+        <url-pattern>/FavoriteBooksController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FavoriteBooksPageController</servlet-name>
+        <servlet-class>com.library.controller.mainpage.FavoriteBooksPageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FavoriteBooksPageController</servlet-name>
+        <url-pattern>/FavoriteBooksPageController</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>

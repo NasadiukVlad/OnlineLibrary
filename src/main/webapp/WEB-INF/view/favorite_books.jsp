@@ -13,7 +13,7 @@
     <script type="text/javascript" src="js/scrollOnTop.js"></script>
     <%--<link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />--%>
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 
     <div id="content" class="content">
 
-        <c:forEach items="${downloadBooksList}" var="element">
+        <c:forEach items="${favoriteBooksList}" var="element">
             <td><h2>${element.title}</h2></td>
             <br>
             <td>Description: ${element.description}</td>
@@ -66,19 +66,9 @@
                     <input type="submit" value="download" class ="button"/>
                 </form>
             </td>
-            <td>
-                <form action="FavoriteBooksController" method="post">
-                    <input type="hidden" name="title" value= "${element.title}">
-                    <input type="hidden" name="description" value= "${element.description}">
-                    <input type="hidden" name="author" value= "${element.author}">
-                    <input type="hidden" name="filePath" value= "${element.filePath}">
-                    <input type="submit" value="add to favorite" class ="button"/>
-                </form>
-            </td>
             <br>
             </tr>
         </c:forEach>
-
 
     </div>
 

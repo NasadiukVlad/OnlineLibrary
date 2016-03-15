@@ -16,7 +16,7 @@
 <c:if test="${userStatus == 'user'}">
 <a href="/UploadPageController" class="top_menu_a">Upload book</a>
 </c:if>
-<a href="/ArchivePageController" class="top_menu_a">Selected books</a>
+<a href="/FavoriteBooksPageController" class="top_menu_a">Favorite books</a>
 <c:if test="${empty username}">
 <a href="/LoginController" class="top_menu_a">Login</a>
 <a href="RegistrationController" class="top_menu_a">Registration</a>

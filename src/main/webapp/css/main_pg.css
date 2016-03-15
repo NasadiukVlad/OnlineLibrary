@@ -240,6 +240,18 @@ a {
     text-decoration: none;
 }
 
+.button {
+    margin-top: 20px;
+    width: 20%;
+    height: 9%;
+    background: #22313f;
+    color: #fffc01;
+    text-align: center;
+    border-color: #fffc01;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .clr {
     clear: both;
 }
